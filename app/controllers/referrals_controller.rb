@@ -10,4 +10,12 @@ class ReferralsController < ApplicationController # :nodoc:
 
   def edit
   end
+
+  def update
+  	@referral = ReferralUpdator.update(params[:referral])
+  	render :show
+  end
+
+  def show
+  end
 end

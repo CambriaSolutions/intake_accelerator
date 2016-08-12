@@ -1,1 +1,6 @@
 %h1 Referral ##{@referral['reference']}
+
+= form_tag(referral_path(@referral['id']), method: :put) do
+	= text_field_tag "referral[narration_text]"
+	= hidden_field_tag "referral[id]", @referral['id']
+	= submit_tag 'Save'
