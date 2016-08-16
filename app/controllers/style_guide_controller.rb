@@ -24,6 +24,7 @@ class StyleGuideController < ApplicationController # :nodoc:
       buttons
       alerts
       navigation
+      cards
     ).delete(page_name)
   end
 end
