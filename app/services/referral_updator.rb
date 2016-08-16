@@ -13,7 +13,7 @@ class ReferralUpdator
     ::API.connection.put do |req|
       req.url "/api/v1/referrals/#{referral_params['id']}"
       req.headers['Content-Type'] = 'application/json'
-      req.body = { referral: referral_params }.to_json
+      req.body = { referral: referral_params }
     end
   end
   private_class_method :make_api_request_with_params
