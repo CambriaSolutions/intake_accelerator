@@ -74,7 +74,7 @@ release:
 	@ docker-compose -p $(REL_PROJECT) -f $(REL_COMPOSE_FILE) pull
 	${INFO} "Building images..."
 	@ docker-compose -p $(REL_PROJECT) -f $(REL_COMPOSE_FILE) build intake_app
-#	@ docker-compose -p $(REL_PROJECT) -f $(REL_COMPOSE_FILE) up intake_app
+	@ docker-compose -p $(REL_PROJECT) -f $(REL_COMPOSE_FILE) up -d intake_app
 	${INFO} "Release image build complete"
 
 clean:
