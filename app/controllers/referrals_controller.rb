@@ -47,7 +47,13 @@ class ReferralsController < ApplicationController # :nodoc:
   end
 
   def index
-    @referrals = ReferralsRepo.search({}).results
+    respond_to do |format|
+      format.html
+      format.json do
+        referrals = ReferralsRepo.search({}).results
+        render json: referrals
+      end
+    end
   end
 
   private
