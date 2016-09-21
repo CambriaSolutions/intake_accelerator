@@ -35,6 +35,7 @@ class ReferralsController < ApplicationController # :nodoc:
       :ended_at,
       :incident_county,
       :incident_date,
+      :involved_people_ids,
       :location_type,
       :method_of_referral,
       :name,
