@@ -39,6 +39,7 @@ end
 group :test do
   gem 'capybara'
   gem 'capybara-accessible'
+  gem 'capybara-screenshot'
   gem 'faker'
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
