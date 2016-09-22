@@ -12,4 +12,4 @@ import ReferralsApp from 'ReferralsApp'
 Hello.sayHello('Visitor')
 Hello.sayGoodbye('Visitor')
 ReactDOM.render(<Autocompleter />, document.getElementById('add-person'))
-ReactDOM.render(<ReferralsApp />, document.getElementById('referrals-app'))
+ReactDOM.render(React.createElement(ReferralsApp, {}), document.getElementById('referrals-app'))
