@@ -325,7 +325,7 @@ legend {
 input[type='checkbox'],
 input[type='radio'] {
   margin-left: -2rem;
-  opacity: 0;
+  clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
 }
 
