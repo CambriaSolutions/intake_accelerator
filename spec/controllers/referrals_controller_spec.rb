@@ -95,7 +95,7 @@ describe ReferralsController do
       let(:search) { double(:search, results: referrals) }
       before do
         allow(ReferralsRepo).to receive(:search)
-          .with({})
+          .with({:query=>{:filtered=>{:filter=>{:bool=>{:must=>[]}}}}})
           .and_return(search)
       end
 
@@ -115,7 +115,11 @@ describe ReferralsController do
         {
           filtered: {
             filter: {
-              terms: { response_time: %w(immediate within_twenty_four_hours) }
+              bool: {
+                must: [{
+                  terms: { response_time: %w(immediate within_twenty_four_hours) }
+                }]
+              }
             }
           }
         }
